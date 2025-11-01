@@ -71,6 +71,9 @@ A scalable, production-ready movie ticket booking system built with Go, similar 
 ## 🏗 Architecture
 
 ### High-Level Architecture
+
+![High-Level Design](hld.png)
+
 ```
 Client → Load Balancer → API Gateway → Microservices
                                       ↓
@@ -81,6 +84,10 @@ Client → Load Balancer → API Gateway → Microservices
                         ↑                           ↑
                         └───────── Kafka ──────────┘
 ```
+
+### Low-Level Design
+
+![Low-Level Design](LLD.png)
 
 ### Booking Flow (Critical Path)
 1. User selects seats → Temporary hold (10 min TTL)
